@@ -1,0 +1,676 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 1px;
+}
+
+body {
+    background: #efeeee;
+}
+
+.panel {
+    height: 100vh;
+    opacity: 1;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+/* Side Bar */
+.side-bar {
+    background-color: #00964f;
+    color: white;
+    height: auto;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    box-shadow: 4px 5px 15px rgba(0, 0, 0, 0.4);
+    z-index: 1; 
+}
+
+
+
+.navbar {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar li {
+    width: 100%;
+    margin: 0 0 0.5rem 0;
+}
+
+.navbar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 0.6rem 0.9rem;
+    text-align: left;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+    width: 80%;
+    margin: auto;
+}
+
+.navbar a:hover {
+    background-color: gold;
+    color: #00964f;
+    border-radius: 8px; 
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 0.5rem 1rem;
+    width: 80%;
+    margin: auto;
+    border-radius: 8px;
+}
+
+.nav-item-logout {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 0.5rem 1rem;
+    width: 80%;
+    margin: auto;
+    border-radius: 8px;
+}
+
+
+.nav-item box-icon {
+    font-size: 1.3rem;
+    color: white;
+    border-radius: 8px;
+}
+
+.nav-item a {
+    flex-grow: 1;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    border-radius: 8px;
+}
+
+.nav-item:hover {
+    background-color: gold;
+    border-radius: 8px; 
+}
+
+.nav-item:hover a {
+    color: #00964f;
+}
+
+.nav-item.active {
+    background-color: gold;
+    color: #00964f;
+    font-weight: bold;
+}
+
+/* Logo Side Bar */
+.logo {
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo .icon {
+    height: 3.8rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.logo .logo-text .library {
+    font-size: 1.4rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    letter-spacing: 4px;
+}
+
+.logo .logo-text .imus-campus {
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+}
+
+.side-hr {
+    height: 0.2rem;
+    background-color: white;
+    width: 80%;
+    opacity: 1;
+}
+
+/* Main Bar */
+
+.main-menu {
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.main-bar {
+    height: 100vh;
+    width: 80vw;
+    background-color: #fff;
+    padding: 2rem;
+}
+
+/* Header */
+.header {
+    width: 70vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-welcome {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-icon {
+    margin-right: 0.5rem;
+}
+
+.header-admin {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.header-line {
+    height: 0.2rem;
+    background-color: black;
+    width: 100%;
+    margin: 1rem 0;
+    opacity: 1;
+    z-index: 2; 
+}
+
+/* Dashboard Content */
+
+.dashboard {
+    height: 80vh;
+    background-color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 1rem;
+}
+
+.title-dashboard {
+    font-weight: bold;
+    font-size: 2rem; 
+    margin: 0; 
+}
+
+.dashboard-right {
+    display: flex;
+    align-items: center; 
+    gap: 0.5rem; 
+}
+
+.dashboard-right a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #00964f; 
+    font-size: 1rem;
+    display: inline-block; 
+}
+
+.dashboard-right a:hover {
+    color: darkgreen; 
+}
+
+.dashboard-nav {
+    font-size: 1rem;
+    color: #333; 
+    display: inline-block; 
+    margin: 0; 
+}
+
+.header-line {
+    height: 4px;
+    background-color: #333;
+    width: 100%;
+    margin: 0.5rem 0; 
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-auto-rows: auto; /* Use grid-auto-rows for better flexibility */
+    gap: 20px; /* Adds spacing between cards */
+    width: 100%;
+    max-width: 900px;
+    margin: 1.5rem;
+}
+
+.stat-card {
+    background-color: #cbcaca;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.stat-card .sem {
+    font-size: 2rem;
+    color: black;
+    font-weight: bold;
+    margin: 0;
+}
+.stat-card h3 {
+    font-size: 1.1rem;
+    color: black;
+    font-weight: bold;
+    margin: 0;
+}
+
+.stat-card h2 {
+    font-size: 3.5rem;
+    color: #000;
+    font-weight: bold;
+}
+
+.view-info {
+    display: flex;
+    margin-left: 11rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 25%;
+    background-color: #eeeeef;
+    border-radius: 15px;
+}
+.view-info a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+/* Students Content */
+
+.title-students {
+    font-weight: bold;
+}
+
+
+.students-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 1rem;
+}
+
+.title-students {
+    font-weight: bold;
+    font-size: 2rem; 
+    margin: 0; 
+}
+
+.students-right {
+    display: flex;
+    align-items: center; 
+    gap: 0.5rem; 
+}
+
+.students-right a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #00964f; 
+    font-size: 1rem;
+    display: inline-block; 
+}
+
+.students-right a:hover {
+    color: darkgreen; 
+}
+
+.students-nav {
+    font-size: 1rem;
+    color: #333; 
+    display: inline-block; 
+    margin: 0; 
+}
+
+.header-line {
+    height: 4px;
+    background-color: #333;
+    width: 100%;
+    margin: 0.5rem 0; 
+}
+
+
+/* Books Content */
+
+.books {
+    height: 90vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+.books-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 1rem;
+    width: 100%; 
+}
+
+.title-books {
+    font-weight: bold;
+    font-size: 2rem; 
+    margin: 0; 
+}
+
+.books-right {
+    display: flex;
+    align-items: center; 
+    gap: 0.5rem; 
+}
+
+.books-right a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #00964f; 
+    font-size: 1rem;
+    display: inline-block; 
+}
+
+.books-right a:hover {
+    color: darkgreen; 
+}
+
+.books-nav {
+    font-size: 1rem;
+    color: #333; 
+    display: inline-block; 
+    margin: 0; 
+}
+
+.header-line {
+    height: 4px;
+    background-color: #333;
+    width: 100%;
+    margin: 0.5rem 0; 
+}
+
+.button-align {
+    width: 71vw;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 0.3rem 0;
+}
+
+.books-body {
+    height: 90vh;
+    width: 73vw;
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.book-grid {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 1rem;
+    overflow-y: auto; 
+    height: 100%; 
+    padding: 0.4rem; 
+    border: 5px solid #ccc; 
+    border-radius: 8px; 
+    background-color: #f0f0f0; 
+}
+
+.book-container h3 {
+    font-size: 11px;
+    color: #333;
+    margin: 0.3rem 0;
+    font-weight: bold;
+}
+
+.book-container p {
+    margin: 0.1rem auto;
+    font-size: 10px;
+    color: #555;
+}
+
+.function-book {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+#deleteBookBtn {
+    font-size: 1rem; 
+    padding: 0.19rem 0.5rem;
+    border-radius: 0.5rem; 
+}
+
+
+/* In-Library Content */
+
+.library-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 1rem;
+}
+
+.title-library {
+    font-weight: bold;
+    font-size: 2rem; 
+    margin: 0; 
+}
+
+.library-right {
+    display: flex;
+    align-items: center; 
+    gap: 0.5rem; 
+}
+
+.library-right a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #00964f; 
+    font-size: 1rem;
+    display: inline-block; 
+}
+
+.library-right a:hover {
+    color: darkgreen; 
+}
+
+.library-nav {
+    font-size: 1rem;
+    color: #333; 
+    display: inline-block; 
+    margin: 0; 
+}
+
+.header-line {
+    height: 4px;
+    background-color: #333;
+    width: 100%;
+    margin: 0.5rem 0; 
+}
+
+
+/* Computers Content */
+
+.computers {
+    height: 80vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.computers-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 1rem;
+}
+
+.title-computers {
+    font-weight: bold;
+    font-size: 2rem; 
+    margin: 0; 
+}
+
+.computers-right {
+    display: flex;
+    align-items: center; 
+    gap: 0.5rem; 
+}
+
+.computers-right a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #00964f; 
+    font-size: 1rem;
+    display: inline-block; 
+}
+
+.computers-right a:hover {
+    color: darkgreen; 
+}
+
+.computers-nav {
+    font-size: 1rem;
+    color: #333; 
+    display: inline-block; 
+    margin: 0; 
+}
+
+.header-line {
+    height: 4px;
+    background-color: #333;
+    width: 100%;
+    margin: 0.5rem 0; 
+}
+
+.computers-body {
+    height: 90vh;
+    width: 73vw;
+    padding: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgb(221, 221, 221);
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.monitor-label {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 4px 0 0 0;
+}
+
+.monitor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    width: 50%;
+    border: 2px solid black;
+    border-radius: 10px;
+    flex-direction: column; 
+    padding: 0.5rem;
+}
+
+.monitor button {
+    margin-top: 10px; 
+}
+
+
+/* MAIN PAGE STYLE */
+.nav-main {
+    background-color: #00974e; 
+    color: white;
+    height: 15vh;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-icon-main {
+    margin-right: 0.5rem;
+}
+
+.sign-in {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sign-in h2 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #008000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
